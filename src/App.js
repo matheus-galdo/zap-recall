@@ -3,7 +3,6 @@ import Game from "./pages/Game";
 import Home from "./pages/Home";
 import './style.css';
 import './reset.css';
-import decks from "./Decks";
 
 function App() {
   const [screen, setScreen] = useState('home');
@@ -11,7 +10,12 @@ function App() {
 
   return (
     <>
-      {screen === 'home' && <Home changeScreen={setScreen} selectDeck={setSelectedDeck} selectedDeck={selectedDeck}/>}
+      {screen === 'home' && <Home
+        changeScreen={setScreen}
+        selectDeck={setSelectedDeck}
+        selectedDeck={selectedDeck}
+      />}
+      
       {screen === 'game' && <Game changeScreen={setScreen} deckName={selectedDeck}/>}
     </>
   );
