@@ -1,0 +1,14 @@
+.button-home {
+    font-family: 'Recursive', cursive;
+    font-size: 18px;
+    width: 250px;
+    height: 54px;
+
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    color: #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    margin-top: 40px;
+}

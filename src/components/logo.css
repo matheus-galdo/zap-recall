@@ -1,0 +1,29 @@
+.logo-home{
+    display: flex;
+}
+
+.logo-home.small{
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-home.big{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-home .logo-image-big{
+    margin-bottom: 20px;
+}
+
+.logo-home .logo-image-sm{
+    margin-right: 20px;
+    width: 52px;
+    height: 60px;
+}
+
+.logo-home h1{
+    font-family: 'Righteous', cursive;
+    font-weight: 100;
+}

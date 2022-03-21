@@ -1,0 +1,30 @@
+.game-container{
+    font-family: 'Recursive', cursive;
+}
+
+
+
+.pergunta{
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 90%;
+    box-shadow: 0px 4px 5px 0px #00000026;
+    border-radius: 5px;
+}
+
+.aberta{
+    background-color: #FFFFD5;
+    height: 80px;
+}
+
+.errado{
+    color: var(--color-red);
+}
+
+.medio{
+    color: var(--color-yellow);
+}
+
+.zap{
+    color: var(--color-green);
+}

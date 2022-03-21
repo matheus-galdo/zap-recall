@@ -1,24 +1,22 @@
-.pergunta{
-    padding: 20px;
-    margin-bottom: 50px;
-    width: 90%;
-    box-shadow: 0px 4px 5px 0px #00000026;
-    border-radius: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400&family=Righteous&display=swap');
+
+:root{
+    --color-pink: #FB6B6B;
+    --color-red: #FF3030;
+    --color-yellow: #FF922E;
+    --color-green: #2FBE34;
 }
 
-.aberta{
-    background-color: #FFFFD5;
-    height: 80px;
-}
 
-.errado{
-    color: #ff0000;
-}
 
-.medio{
-    color: #ffff00;
-}
+.home{
+    background-color: var(--color-pink);
+    color: #ffffff;
+    height: 100%;
 
-.zap{
-    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
