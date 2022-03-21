@@ -10,7 +10,7 @@ function Game() {
 
     const [answers, setAnswers] = useState([]);
     const [finished, setFinished] = useState(false);
-    const [deck, setDeck] = useState(DeckReact)
+    const [deck, setDeck] = useState(DeckTeste)
 
     console.log(answers);
 

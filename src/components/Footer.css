@@ -11,6 +11,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: height ease-in 0.3s;
+    overflow: hidden;
+}
+
+.footer.finished{
+    height: 150px;
+}
+
+.game-finished-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-finished-message h1{
+    font-size: 18px;
+}
+.game-finished-message img{
+    margin-right: 5px;
+}
+
+.game-finished-message p{
+    margin: 10px 0;
 }
 
 .answers-icons{
