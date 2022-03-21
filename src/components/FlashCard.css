@@ -1,6 +1,6 @@
 
 .flashcard{
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 25px;
     box-shadow: 0px 4px 5px 0px #00000026;
     border-radius: 5px;
@@ -55,16 +55,19 @@
     border-radius: 5px;
     border: 0;
     height: 38px;
-    min-width: 95px;
-    padding: 5px;
+    max-width: 85px;
     margin-left: 8px;
+    padding: 0 5px;
     color: #fff;
     font-family: 'Recursive', cursive;
     font-size: 14px;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .forgot-button{
     background-color: var(--color-red);
+    margin-left: 0px;
 }
 
 .remember-button{

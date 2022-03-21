@@ -6,13 +6,11 @@ import './Game.css';
 import { DeckReact, DeckTeste } from "../Decks";
 
 
-function Game() {
+function Game({changeScreen}) {
 
     const [answers, setAnswers] = useState([]);
     const [finished, setFinished] = useState(false);
     const [deck, setDeck] = useState(DeckTeste)
-
-    console.log(answers);
 
     function finishGame() {
         if (answers.length === deck.length) {
@@ -35,7 +33,7 @@ function Game() {
             />)}
         </div>
 
-        <Footer total={deck.length} answers={answers} />
+        <Footer total={deck.length} answers={answers} changeScreen={changeScreen}/>
     </div>;
 }
 

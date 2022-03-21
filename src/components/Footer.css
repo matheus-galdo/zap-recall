@@ -16,7 +16,7 @@
 }
 
 .footer.finished{
-    height: 160px;
+    height: 200px;
 }
 
 .game-finished-message{
@@ -34,6 +34,17 @@
 
 .game-finished-message p{
     margin: 10px 0;
+}
+
+.game-finished-message button{
+    background-color: var(--color-pink);
+    border: 0;
+    font-size: 14px;
+    font-family: 'Recursive', cursive;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .answers-icons{
