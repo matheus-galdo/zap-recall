@@ -3,11 +3,11 @@ import './Footer.css';
 
 export default function Footer({ answers, total }) {
     return <footer className="footer">
-        {answers.length}/{total} CONCLUÍDOS
+        {answers.length === total && <div className="game-finished">
+                Terminou
+        </div>}
+        <p>{answers.length}/{total} CONCLUÍDOS</p>
 
-        {answers.length === total && <>
-            Terminou
-        </>}
 
         <div className="answers-icons">
             {answers.map((answer, index) => <AnswerIcon key={index} type={answer} />)}

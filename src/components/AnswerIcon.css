@@ -1,0 +1,17 @@
+.answer-icon{
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+
+.answer-icon.forgot{
+    color: var(--color-red);
+}
+
+.answer-icon.remember{
+    color: var(--color-yellow);
+}
+
+.answer-icon.zap{
+    color: var(--color-green);
+}

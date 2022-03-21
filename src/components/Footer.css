@@ -13,10 +13,10 @@
     align-items: center;
 }
 
-.icons{
+.answers-icons{
     display: flex;
 }
 
-.icons .algo{
+.answers-icons .answer-icon{
     margin-right: 5px;
 }
