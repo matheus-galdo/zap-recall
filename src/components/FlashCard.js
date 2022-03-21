@@ -1,16 +1,17 @@
 import { useState } from "react";
+import {BiRightArrow} from 'react-icons/bi';
 import AnswerIcon from "./AnswerIcon";
+import './FlashCard.css';
 
 function FlashCard(props) {
     const { pergunta, resposta } = props.questao;
-
-    const { answers, callback, finishGame } = props
+    const { answers, callback, finishGame } = props;
 
     const [showingQuestion, setShowingQuetion] = useState(false);
     const [showingAnswer, setShowingAnswer] = useState(false);
     const [solution, setSolution] = useState(null);
 
-    let classe = 'pergunta';
+    let classe = 'flashcard';
     if (showingQuestion) classe += ' aberta';
     if (solution) classe += ` ${solution}`;
 
@@ -24,17 +25,18 @@ function FlashCard(props) {
 
     function finishQuestion(event, finalSolution) {
         event.stopPropagation();
-        setShowingQuetion(false)
-        setSolution(finalSolution)
-        setShowingAnswer(false)
-        callback([...answers, finalSolution])
+        setShowingQuetion(false);
+        setSolution(finalSolution);
+        setShowingAnswer(false);
+        callback([...answers, finalSolution]);
         finishGame();
     }
-
 
     return <div onClick={showQuation} className={classe}>
         {!showingQuestion && <>
             <p>{`Pergunta ${props.index + 1}`}</p>
+            <BiRightArrow/>
+
             <AnswerIcon type={solution} />
         </>}
 

@@ -1,30 +1,12 @@
 .game-container{
     font-family: 'Recursive', cursive;
-}
-
-
-
-.pergunta{
-    padding: 20px;
-    margin-bottom: 50px;
+    min-height: 100vh;
+    
     width: 90%;
-    box-shadow: 0px 4px 5px 0px #00000026;
-    border-radius: 5px;
+    max-width: 600px;
 }
 
-.aberta{
-    background-color: #FFFFD5;
-    height: 80px;
-}
 
-.errado{
-    color: var(--color-red);
-}
-
-.medio{
-    color: var(--color-yellow);
-}
-
-.zap{
-    color: var(--color-green);
+.game-container .questions-container{
+    margin-bottom: 250px;
 }

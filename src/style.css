@@ -8,10 +8,13 @@
     --color-green: #2FBE34;
 }
 
-
-
-.home{
+#root{
     background-color: var(--color-pink);
+    display: flex;
+    justify-content: center;
+}
+
+.home-container{
     color: #ffffff;
     height: 100%;
 

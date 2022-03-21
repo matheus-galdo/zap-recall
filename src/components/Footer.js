@@ -1,9 +1,8 @@
-import { useState } from "react"
 import AnswerIcon from "./AnswerIcon"
+import './Footer.css';
 
 export default function Footer({ answers, total }) {
-
-    return <footer>
+    return <footer className="footer">
         {answers.length}/{total} CONCLUÍDOS
 
         {answers.length === total && <>

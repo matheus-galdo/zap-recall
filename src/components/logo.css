@@ -1,10 +1,12 @@
 .logo-home{
     display: flex;
+    color: #ffffff;
 }
 
 .logo-home.small{
     align-items: center;
     justify-content: center;
+    margin: 50px;
 }
 
 .logo-home.big{
