@@ -16,7 +16,7 @@
 }
 
 .footer.finished{
-    height: 150px;
+    height: 160px;
 }
 
 .game-finished-message{
@@ -27,6 +27,7 @@
 .game-finished-message h1{
     font-size: 18px;
 }
+
 .game-finished-message img{
     margin-right: 5px;
 }
