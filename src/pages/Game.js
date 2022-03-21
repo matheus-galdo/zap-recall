@@ -3,14 +3,14 @@ import Logo from "../components/Logo";
 import Footer from "../components/Footer";
 import FlashCard from "../components/FlashCard";
 import './Game.css';
-import { DeckReact, DeckTeste } from "../Decks";
+import decks from "../Decks";
 
 
-function Game({changeScreen}) {
+function Game({changeScreen, deckName}) {
 
     const [answers, setAnswers] = useState([]);
     const [finished, setFinished] = useState(false);
-    const [deck, setDeck] = useState(DeckTeste)
+    const deck = decks.filter(deck => deck.name === deckName)[0].questions;
 
     function finishGame() {
         if (answers.length === deck.length) {
@@ -19,11 +19,11 @@ function Game({changeScreen}) {
     }
 
     return <div className='game-container'>
-        <Logo type={'sm'} />
+        <Logo type={'sm'} changeScreen={changeScreen}/>
 
         <div className="questions-container">
-            {deck.sort().map((questao, index) => <FlashCard
-                questao={questao}
+            {deck.sort().map((question, index) => <FlashCard
+                question={question}
                 index={index}
                 key={index}
 

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { BiRightArrow } from 'react-icons/bi';
-import { BsArrowClockwise } from 'react-icons/bs';
 import AnswerIcon from "./AnswerIcon";
 import './FlashCard.css';
 import iconArrow from '../imgs/setinha.png';
 
 
 function FlashCard(props) {
-    const { pergunta, resposta } = props.questao;
+    const { question, answer } = props.question;
     const { answers, callback, finishGame } = props;
 
     const [showingQuestion, setShowingQuetion] = useState(false);
@@ -35,8 +34,6 @@ function FlashCard(props) {
         finishGame();
     }
 
-    console.log(props.index + 1, solution, !!solution);
-
     return <div onClick={showQuation} className={classe}>
         {!showingQuestion && <>
             <p>{`Pergunta ${props.index + 1}`}</p>
@@ -44,7 +41,7 @@ function FlashCard(props) {
         </>}
 
         {showingQuestion && !showingAnswer && <>
-            <p>{pergunta}</p>
+            <p>{question}</p>
             <div className="turn-button-container">
                 <button className='turn-button' onClick={showAnswer}>
                     <img src={iconArrow} alt="" />
@@ -53,7 +50,7 @@ function FlashCard(props) {
         </>}
 
         {showingQuestion && showingAnswer && <>
-            <p>{resposta}</p>
+            <p>{answer}</p>
             <div className="finish-game-buttons-container">
                 <button className='forgot-button finish-button' onClick={(event) => finishQuestion(event, 'forgot')}>não lembrei</button>
                 <button className='remember-button finish-button' onClick={(event) => finishQuestion(event, 'remember')}>quase lembrei</button>

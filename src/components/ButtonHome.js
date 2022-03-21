@@ -1,7 +1,8 @@
 import './ButtonHome.css';
 
-function ButtonHome({onClick, children}) {
-    return <button className="button-home" onClick={onClick}>
+function ButtonHome({onClick, children, selectedDeck}) {
+    const classButton = selectedDeck !== 'escolha'? 'button-home' : 'button-home disabled'
+    return <button className={classButton} onClick={onClick} disabled={selectedDeck === 'escolha'}>
         {children}
     </button>;
 }

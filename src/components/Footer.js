@@ -1,8 +1,7 @@
 import AnswerIcon from "./AnswerIcon"
-import './Footer.css';
-
 import party from '../imgs/party.png'
 import sad from '../imgs/sad.png'
+import './Footer.css';
 
 const endMessages = [
     { icon: party, title: 'Parabéns!', text: 'Você não esqueceu de nenhum flashcard!' },
@@ -10,7 +9,6 @@ const endMessages = [
 ];
 
 export default function Footer({ answers, total, changeScreen }) {
-    console.log('aaa', answers);
     const gameIsFinished = answers.length === total;
     const result = answers.includes('forgot') ? endMessages[1] : endMessages[0];
 
