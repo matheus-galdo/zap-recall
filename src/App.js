@@ -7,6 +7,7 @@ import './reset.css';
 function App() {
   const [screen, setScreen] = useState('home');
   const [selectedDeck, setSelectedDeck] = useState('escolha');
+  const [goal, setGoal] = useState('');
 
   return (
     <>
@@ -14,9 +15,15 @@ function App() {
         changeScreen={setScreen}
         selectDeck={setSelectedDeck}
         selectedDeck={selectedDeck}
+        setGoal={setGoal}
       />}
-      
-      {screen === 'game' && <Game changeScreen={setScreen} deckName={selectedDeck}/>}
+
+      {screen === 'game' && <Game
+        changeScreen={setScreen}
+        setGoal={setGoal}
+        goal={goal}
+        deckName={selectedDeck}
+      />}
     </>
   );
 }

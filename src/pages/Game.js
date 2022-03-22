@@ -9,15 +9,15 @@ function random() {
     return Math.random() - 0.5;
 }
 
-function Game({changeScreen, deckName}) {
+function Game({changeScreen, deckName, goal, setGoal}) {
     const [answers, setAnswers] = useState([]);
     const [finished, setFinished] = useState(false);
     const [deck, setDeck] = useState([]);
 
     useEffect(() => {
         const deck = decks.filter(deck => deck.name === deckName)[0].questions;
-        setDeck(deck.sort(random))
-    }, [])
+        setDeck(deck.sort(random));
+    }, []);
 
     function finishGame() {
         if (answers.length === deck.length) {
@@ -40,7 +40,7 @@ function Game({changeScreen, deckName}) {
             />)}
         </div>
 
-        <Footer total={deck.length} answers={answers} changeScreen={changeScreen}/>
+        <Footer total={deck.length} answers={answers} setGoal={setGoal} goal={goal} changeScreen={changeScreen}/>
     </div>;
 }
 

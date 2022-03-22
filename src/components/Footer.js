@@ -8,12 +8,26 @@ const endMessages = [
     { icon: sad, title: 'Putz...!', text: <>Ainda faltam alguns... <br /> Mas não desanime!</> }
 ];
 
-export default function Footer({ answers, total, changeScreen }) {
-    const gameIsFinished = answers.length === total;
-    const result = answers.includes('forgot') ? endMessages[1] : endMessages[0];
+function getEndMessage(answers, goal) {
+    if (goal !== '') {
+        const goalIsAchieved = answers.filter(answer => answer === 'zap').length === Number(goal);
+        return goalIsAchieved ? endMessages[0] : endMessages[1];
+    }
 
+    return answers.includes('forgot') ? endMessages[1] : endMessages[0];
+}
+
+export default function Footer({ answers, total, changeScreen, goal, setGoal }) {
+    const gameIsFinished = answers.length === total;
+    const result = getEndMessage(answers, goal);
+    
     let footerClass = 'footer';
     if (gameIsFinished) footerClass += ' finished';
+
+    function restartGame() {
+        changeScreen('home');
+        setGoal('');
+    }
 
     return <footer className={footerClass}>
         {gameIsFinished && <div className="game-finished-message">
@@ -28,7 +42,7 @@ export default function Footer({ answers, total, changeScreen }) {
         </div>
 
         {gameIsFinished && <div className="game-finished-message">
-            <button onClick={() => changeScreen('home')}>REINICIAR RECALL</button>
+            <button onClick={restartGame}>REINICIAR RECALL</button>
         </div>}
     </footer>
 }

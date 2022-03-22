@@ -24,10 +24,15 @@
     justify-content: center;
 }
 
-.home-container select{
-    margin-top: 40px;
+.home-container select, .home-container input{
     border: 0;
     border-radius: 5px;
     width: 250px;
     height: 40px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.home-container select{
+    margin-top: 40px;
 }

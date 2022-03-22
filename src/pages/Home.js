@@ -1,10 +1,13 @@
+import { useState } from "react";
 import ButtonHome from "../components/ButtonHome";
 import Logo from "../components/Logo";
 import decks from "../Decks";
 
-function Home({ changeScreen, selectDeck, selectedDeck }) {
+function Home({ changeScreen, selectDeck, selectedDeck, setGoal, goal }) {
+    
     return <div className="home-container">
         <Logo type={'big'} />
+        
         <select defaultValue={'escolha'} onChange={(event) => selectDeck(event.target.value)}>
             <option>Escolha seu deck</option>
             {decks.map((deck, index) => {
@@ -13,7 +16,15 @@ function Home({ changeScreen, selectDeck, selectedDeck }) {
                 </option>
             })}
         </select>
-        <ButtonHome selectedDeck={selectedDeck} onClick={() => changeScreen('game')}>Iniciar Recall!</ButtonHome>
+        <input type="text" placeholder={'Digite sua meta de zaps...'} onChange={event => setGoal(event.target.value)}/>
+        
+        <ButtonHome
+            selectedDeck={selectedDeck}
+            goal={goal}
+            onClick={() => changeScreen('game')}
+        >
+            Iniciar Recall!
+        </ButtonHome>
     </div>
 }
 
